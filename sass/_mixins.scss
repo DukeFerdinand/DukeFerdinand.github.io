@@ -1,0 +1,5 @@
+@mixin position($type, $side, $vertical, $horizontal){
+	position: #{$type}; 
+	top: #{$vertical};
+	#{$side}: #{$horizontal};
+}

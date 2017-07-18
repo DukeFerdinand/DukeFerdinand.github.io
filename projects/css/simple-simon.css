@@ -1,0 +1,232 @@
+Font for LCD*/
+@font-face {
+	font-family: 'digital-7';
+	src: url('/projects/fonts/digital-7.ttf');
+}
+/*Font for Title/Everything*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*{ user-select: none; }
+
+html {
+	background: #475577;
+}
+/*.center-evertyhing {
+	display: flex;
+	justify-content: center;
+}
+*/
+/*GitHub link in the top right corner*/
+.github {
+	width: 50px;
+	box-shadow: 2px 2px 60px black;
+	border-radius: 50px;
+	float: right;
+	position: relative;
+	top: -50px;
+	right: 50px;
+}
+/*Main Title*/
+#title{
+	color: #EFEFEF;
+	font-size: 2.5em;
+	text-shadow:3px 3px 10px black;
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 40px;
+}
+/*Used to be for round, now for gameover message, trying to phase this one out*/
+#round {
+	color: #EFEFEF;
+	font-size: 1em;
+	text-shadow:3px 3px 10px black;
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+	position: fixed;
+	left: 40px;
+}
+/*Big Gray Square*/
+.background{
+	background-color: darkgray;
+	width: 525px;
+	height: 525px;
+	transform: rotate(45deg);
+	position: absolute;
+	z-index: -3;
+	top: auto;
+	right: auto;
+	border-radius: 75px;
+	box-shadow: 2px 2px 50px 3px #080808
+}
+/*styling for all the boxes*/
+.boxes {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+.boxes:focus, .boxes:active;{
+	outline-style: none;
+
+}
+/*Class to change to 'Light up' a box*/
+.boxes-opacity {
+	opacity: .4;
+/*	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;*/
+}
+/*Lights Box on user click*/
+.boxes:active {
+	opacity: 1;
+}
+/*blue box*/
+#box1 {
+	background-color: blue;
+	margin-bottom: -60px;
+	border-radius: 50px 0 0 0;
+	box-shadow: 2px 2px 15px 5px #5f6c7a
+}
+/*red box*/
+#box2 {
+	background-color: red;
+	margin-left: -60px;
+	border-radius: 0 50px 0 0;
+	box-shadow: 2px 2px 15px 5px #5f6c7a
+	position: relative;
+	z-index: 19
+}
+/*green box*/
+#box3 {
+	background-color: green;
+	margin-top: -60px;
+	border-radius: 0 0 50px 0;
+	box-shadow: 2px 2px 15px 5px #5f6c7a
+}
+/*yellow box*/
+#box4{
+	background-color: yellow;
+	margin-right: -60px;
+	border-radius: 0 0 0 50px;
+	box-shadow: 2px 2px 15px 5px #5f6c7a;
+	position: relative;
+	z-index: 19
+}
+/*invisible container that centers evertyhing for the game*/
+#container{
+	/*not using a flexbox because Safari is a huge piece of garbage
+	and won't position anything properly*/
+	position: absolute;
+	top: 20%;
+	left: 33%;
+}
+/*invisible container inside big gray square, rotates things -45 to counteract*/
+.second-container {
+	transform: rotate(-45deg);
+	margin: 15px 20px 15px 15px;
+}
+/*Small gray square with button and */
+.center {
+	height: 200px;
+	width: 200px;
+	border: 1px solid #5f6c7a;
+	background-color: gray;
+	position: relative;
+	z-index: 20;
+	border-radius: 10px;	
+}
+/*The Start Button*/
+#controls {
+	height: 45px;
+	width: 80px;
+	margin: 25px 60px 15px 60px;
+	border: 1px solid #5f6c7a;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.25em;
+	font-family: 'Montserrat', sans-serif;
+	box-shadow: 2px 2px 20px 10px #707070;
+}
+#controls:active {
+	box-shadow: 2px 2px 20px 5px #707070 inset;
+}
+#controls:active, #controls:focus{
+	outline: none;
+}
+/*GameMode Buttons*/
+#mode{
+	display: flex;
+	flex: 0 1 auto;
+	display: -webkit-flex;
+	justify-content: center;
+}
+.mode-button {
+	width: 75px;
+	margin: -5px 10px 0 10px;
+	background-color: #c0c0c0;
+		
+	border: 1px solid #a9a9a9;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+}
+.mode-button:active{
+	box-shadow: 2px 2px 20px 5px #707070 inset;
+}
+.mode-button:active, .mode-button:focus{
+	outline: none;
+}
+
+/*The section and 'rows' could and should be combined, but I leave them separate /Just in case/ */
+/*section {
+	display: flex;
+	flex: 0 1 auto;
+}*/
+#top-row{
+	display: flex;
+	justify-content: center;
+	flex: 0 1 auto;
+}
+#middle-row {
+	justify-content: center;
+	display: flex;
+	flex: 0 1 auto;
+}
+#bottom-row {
+	justify-content: center;
+	display: flex;
+	flex: 0 1 auto;
+}
+
+/*Failed attempt at moving the gameover message, will trya again later*/
+#gameover {
+	position: relative;
+	top: -50px;
+}
+/*The 'LCD' which displays the current round*/
+#lcd {
+	font-family: 'digital-7';
+	text-align: center;
+	font-size: 2em;
+	width: 90px;
+	height: 50px;
+	background-color: #96ab8b;
+	margin: 5px 40px 0 40px;
+	padding: 15px; 
+}
+#lcd-text {
+	margin-top: -15px;
+}
+
+/*@media screen and (max-width: 600px){
+	.container {
+		width: 300px;
+	}
+	.background{
+		width: 275px;
+	}
+	.second-container {
+		width: 50%;
+	}
+	.boxes {
+		width: 50px;
+	}
+}

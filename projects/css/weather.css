@@ -1,0 +1,80 @@
+* {
+  font-family: helvetica; }
+
+html, body {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 20px;
+  background: linear-gradient(#F0F0F0, #AAA);
+  padding-bottom: 250px; }
+
+header, div {
+  text-align: center; }
+
+weather-balloon {
+  text-align: center;
+  background-color: #FCFCFC;
+  border: 2px solid black;
+  display: inline-block;
+  height: 200px;
+  width: 29%;
+  padding: 15px 10px 15px 10px;
+  margin: 0; }
+
+main weather-balloon {
+  width: 13%;
+  padding-top: -5px;
+  overflow: scroll;
+  border-radius: 0 25px 0 25px; }
+
+main {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around; }
+
+map-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px; }
+
+my-map {
+  width: 50%;
+  height: 500px;
+  display: block;
+  background-color: green;
+  margin-top: 50px; }
+
+my-map div {
+  background-color: transparent;
+  border: 0;
+  margin: auto;
+  padding: auto;
+  width: auto;
+  height: auto; }
+
+section {
+  width: 75%;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
+  position: relative; }
+
+#today {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 200px;
+  border-radius: 0 50px 0 50px; }
+
+#flex-test {
+  display: flex;
+  justify-content: center; }
+
+/*@media screen (max-width: 500px){
+	div{
+		width: 100%;
+	}
+}*/
+
+/*# sourceMappingURL=weather.css.map */

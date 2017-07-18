@@ -1,0 +1,86 @@
+$whitish: #EFEFEF;
+
+%clickable {
+	cursor: pointer;
+	user-select: none;
+
+	&:active{
+		box-shadow: 0px 0px 10px 5px #202020 inset;
+	}
+}
+
+%border-radius {
+	border-radius: 10px;
+}
+
+
+* {
+	text-align: center;
+}
+
+body{
+	background: #D1D5D8;
+}
+main{
+	@extend %border-radius;
+	margin: 0 auto;
+	margin-top: 10%;
+	width: 80%;
+	border: 1px solid black;
+	padding: 5%;
+	background: #475577;
+	box-shadow: 0px 0px 8px 3px #202020;
+}
+#C {
+	background: #B8312F;
+}
+#answer {
+	background: #41A85F;
+}
+#decimal{
+	background: #F37934;
+}
+
+.row {
+
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	width: 90%;
+}
+.number{
+	background: (#553982 + 50);
+}
+.button {
+	@extend %border-radius, %clickable;
+	width: 25%;
+	height: 50px;
+	border: 1px solid black;
+	margin: 3px;
+	font-size: 1.5em;
+	color: $whitish;
+	padding-top: 15px;
+	box-shadow: 0px 0px 5px 1px #202020;
+}
+.text-fields {
+	@extend %border-radius;
+	width: 74.5%;
+	height: 65px;
+	border: 1px solid black;
+	text-align: right;
+	background: #EFEFEF;
+	margin: 3px;
+	font-size: 2em;
+}
+.operators {
+	@extend %clickable;
+	background: #75706B;
+}
+
+
+@media screen and (min-width: 800px){
+	main {
+		width: 40%;
+		padding: 2%;
+	}
+}
