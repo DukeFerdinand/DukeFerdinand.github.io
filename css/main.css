@@ -117,19 +117,39 @@ a {
   margin: 10px auto; }
 
 #section1 {
-  padding: 2%;
+  float: left;
+  width: 45%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin-bottom: 0; }
 
 #section2 {
-  padding: 2%;
+  float: left;
+  width: 45%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin-bottom: 0; }
 
 #section3 {
-  padding: 2%;
+  float: left;
+  width: 45%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin-bottom: 0; }
 
 #section4 {
-  padding: 2%;
+  float: left;
+  width: 45%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin-bottom: 0; }
 
 .backdrop {
@@ -174,7 +194,7 @@ img.project {
 .info-project {
   display: inline-block;
   margin: 0 auto;
-  width: 22%;
+  width: 45%;
   height: auto;
   background: #22313F; }
 
@@ -228,7 +248,7 @@ img.project {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 10%;
+    top: 80%;
     right: 1em; }
 
   .indicator {
@@ -239,20 +259,36 @@ img.project {
     background: black; }
 
   #section1 {
-    padding: 0;
-    margin-bottom: 5%; }
+    width: 100%;
+    background: #22313F; }
 
   #section2 {
-    padding: 0;
-    margin-bottom: 5%; }
+    width: 100%;
+    background: #A80022; }
 
   #section3 {
-    padding: 0;
-    margin-bottom: 5%; }
+    width: 100%;
+    background: #22313F; }
 
   #section4 {
-    padding: 0;
-    margin-bottom: 5%; }
+    width: 100%;
+    background: #A80022; }
+
+  #section5 {
+    width: 100%;
+    background: #22313F; }
+
+  #section6 {
+    width: 100%;
+    background: #A80022; }
+
+  #section7 {
+    width: 100%;
+    background: #22313F; }
+
+  #section8 {
+    width: 100%;
+    background: #A80022; }
 
   #section1 {
     padding-top: 30%; }

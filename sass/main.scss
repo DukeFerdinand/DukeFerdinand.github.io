@@ -110,7 +110,7 @@ a {
 }
 // Main Body ========================================================================
 // Sections=======================
-@include sections(4, 2%, 0);
+@include sections(4, 2%, 0, 'no');
 
 .backdrop {
 	background: $title-background;
@@ -165,7 +165,7 @@ img.project{
 .info-project {
 	display: inline-block;
 	margin: 0 auto;
-	width: 22%;
+	width: 45%;
 	height: auto;
 	background: $background;
 }
@@ -227,7 +227,7 @@ img.project{
 	.positioner{
 	width:         30px;
 	height:        30px;
-	@include position(absolute, right, 10%, 1em);
+	@include position(absolute, right, 80%, 1em);
 	
 	}
 	.indicator {
@@ -240,7 +240,7 @@ img.project{
 //Main Body ===========================================================
 
 //Sections=======================
-@include sections(4, 0, 5%);
+@include sections(8, 0, 5%, 'yes');
 
 
 	#section1 {
