@@ -11,6 +11,32 @@
   cursor: pointer;
   user-select: none; }
 
+.column-1, #main-container {
+  width: 95%;
+  float: left; }
+
+.column-2 {
+  width: 47.5%;
+  float: left; }
+
+.column-3 {
+  width: 31.66667%;
+  float: left; }
+
+.column-4 {
+  width: 23.75%;
+  float: left; }
+
+.row {
+  width: 100%;
+  height: 800px; }
+
+#main-container {
+  background: #EFEFEF;
+  border-radius: 15px;
+  height: 900px;
+  margin: 0 auto; }
+
 h1 {
   font-size: 1.5em; }
 
@@ -22,26 +48,6 @@ body {
   padding: 0;
   margin: 0;
   height: 1500px; }
-
-.column-1 {
-  width: 100%;
-  float: left; }
-
-.column-2 {
-  width: 50%;
-  float: left; }
-
-.column-3 {
-  width: 33.33333%;
-  float: left; }
-
-.column-4 {
-  width: 25%;
-  float: left; }
-
-.row {
-  width: 100%;
-  height: 800px; }
 
 #titlediv {
   text-align: center;
@@ -107,11 +113,6 @@ body {
 
 .navbar-item:hover {
   color: #6C7A89; }
-
-.github {
-  width: 50px;
-  height: 50px;
-  margin: 10px auto; }
 
 @media screen and (max-width: 500px) {
   .mobile-nav {

@@ -70,21 +70,3 @@ $(window).on('resize', function(){
 // 		$('.about').fadeIn(450);
 // 	});
 // });
-// $('#work-title, #work-title-hidden').click(function() {
-// 	$('.about, .skills, .contact').fadeOut(1, function() {
-// 		// $('#navbar').slideUp(400);
-// 		$('.work').fadeIn(450);
-// 	});
-// });
-// $('#skills-title, #skills-title-hidden').click(function(){
-// 	$('.about, .work, .contact').fadeOut(1, function() {
-// 		// $('#navbar').slideUp(400);
-// 		$('.skills').fadeIn(450);
-// 	});
-// });
-// $('#contact-title, #contact-title-hidden').click(function(){
-// 	$('.about, .work, .skills').fadeOut(1, function() {
-// 		// $('#navbar').slideUp(400);
-// 		$('.contact').fadeIn(450);
-// 	});
-// });

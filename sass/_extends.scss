@@ -17,23 +17,3 @@
 }
 
 //Main body ============================================
-%info-title{
-	@extend %title-font;
-	text-align:  center;
-	font-size:      2em;
-	width:          60%;
-	display:     inline;
-	margin: {
-		top:       auto;
-		right:     auto;
-		left:      auto;
-		bottom:    30px;
-	}
-
-}
-%info-item{
-	@extend %body-font;
-	margin:     0 auto;
-	width:         65%;
-	font-size:     2em;
-}
