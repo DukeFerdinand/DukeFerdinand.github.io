@@ -15,7 +15,7 @@ if ($(window).width() >=500){
 	$(window).scroll(function () {
 	  	if ($(window).width() >=500) {
 		    if ($(window).scrollTop() > 250) {
-		    	$('#wrapper-hidden').fadeIn(250);
+		    	$('#wrapper-hidden').fadeIn(75);
 		    }
 		    if ($(window).scrollTop() < 250) {
 		    	$('#wrapper-hidden').slideUp(75);
@@ -63,7 +63,6 @@ $(window).on('resize', function(){
 // The Titles ================================================================
 // 
 // TODO: try and get the navbar to scroll back up without breaking
-
 // $('#about-title, #about-title-hidden').click(function(){
 // 	$('.work, .skills, .contact').fadeOut(1, function() {
 // 		// $('#navbar').slideUp(400);

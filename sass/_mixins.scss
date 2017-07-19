@@ -6,7 +6,7 @@
 //grid system
 @mixin grid($col-count) {
 	@for $i from 1 through $col-count {
-		$width: 95%;
+		$width: 100%;
 
 		.column-#{$i}{
 			width: ($width/$i);

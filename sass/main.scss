@@ -1,4 +1,9 @@
-@import 'variables', 'extends', 'mixins', 'sections';
+@import 'variables'; 
+@import 'extends';
+@import 'mixins';
+@import 'sections';
+@import 'navbar';
+
 h1{
 	font-size: 1.5em;
 }
@@ -10,159 +15,26 @@ body {
 	padding:              0;
 	margin:               0;
 	height:          1500px;
+	
 }
-
-//Navbar & Title ===========================================================================
-
-#titlediv {
-	@extend           %title-font;
-	text-align:            center;
-	background: $title-background;
-	padding-top:               3%;
-	margin:                     0;
-	color:           $title-color;
-	font-size:              1.5em;
-}
-
-.carat {
-	@extend      %carat-sides;
-	width:       700px;
-	border: {
-		top:     25px solid $carats;
-		bottom: $transparent-border;
-	}
-
-}
-
-.invert-carat {
-	@extend               %carat-sides;
-	width: 700px;
-	border: {
-		top:    $transparent-border;
-	    bottom:  25px solid #A80022;
-	}
-}
-
-.navigation {
+#outer-container {
 	display:           flex;
 	justify-content: center;
 }
-#wrapper{
-	width: 100%;
-}
-#wrapper-hidden{
-	@include position(fixed, left, 0, 0);
 
-	width: 100%;
-	display: none;
-	z-index: 3;
+#main-container {
+	width: 95%;
+	background: $title-background;
+	border-radius:           15px;
+	height:                 900px;
+	margin:                0 auto;
 }
-#navbar,
-#navbar-hidden {
-	padding:                0;
-	background-color: #A80022;
-	position:        relative;
-	z-index:                2;
-	.navbar-cont{
-		display:           flex;
-		justify-content: center;
-	}
-}
-.navbar-fixed{
-	@include position(fixed, left, 0, 0);
-}
-.navbar-sect {
-	border-radius:                 35px;
-	display:                       flex;
-	justify-content:             center;
-	margin: {
-		top:                    10px;
-	    bottom:                 10px;
-	}
-	background-color: $title-background;
-	text-align:                  center;
+.about{
+	background: $carats;
 }
 
-.navbar-sect-icons{
-	@extend .navbar-sect;
-}
-.navbar-item {
-	@extend    %clickable-text;
-	@extend   	   %title-font;
-	display:      inline-block;
-	margin:               20px;
-
-}
-.navbar-item:hover{
-	color: $title-color;
-}
-
-//=======================================================================>
-//======================== Media Breakpoint ==============================>
-//=======================================================================>
-@media screen and (max-width: $max-width) {
-	.mobile-nav{
-		@include position(fixed, -10%, left, 0);
-		display: block;
-
-		width: 100%;
-		background: $title-background;
-		height: 10%;
-
-	}
-	#titlediv {
-		font-size: 1em;
-	}
-
-	.title{
-		text-align: center;
-		width:         90%;	
-		margin:     0 auto;
-		margin-bottom: -1em;
-
-	}
-	#navbar {
-		display: none;
-	}
-	.navbar-sect{
-		width: 100%;
-
-		&:after{
-			content:    "";
-			display: table;
-			clear:    both;
-		}
-	}
-	.navbar-sect {
-		display:                    initial;
-		margin: {
-			top:    50px;
-			bottom: 50px;
-		}
-		width:                         100%;
-		background-color: $title-background;
-		text-align:                  center;
-	}
-	.navbar-sect-icons{
-		display: none;
-	}
-	.carat{
-		width: 0px;
-	}
-	.invert-carat {
-		width: 0;
-	}
-	.positioner{
-	width:         30px;
-	height:        30px;
-	@include position(absolute, right, 70%, 1em);
-	
-	}
-	.indicator {
-		margin-top: 3px;
-		width: 23px;
-		height: 4px;
-		border-radius: 5px;
-		background: black;
+@media screen and (max-width: $max-width){
+	#main-container{
+		margin-top: 25%;
 	}
 }
