@@ -3,3 +3,25 @@
 	top: #{$vertical};
 	#{$side}: #{$horizontal};
 }
+
+@mixin sections($sections, $padding, $margin){
+	@for $i from 1 through $sections{
+		#section#{$i} {
+			padding: $padding;
+			margin-bottom: $margin;
+		}
+	}
+}
+
+//If statement ready for implementation should the need arise
+			// @if $i % 4 == 1 {
+			// 	background: $color1;
+			// } @else if $i % 4 == 2 {
+			// 	background: $color2;
+			// } @else if $i % 4 == 3 {
+			// 	background: $color3;
+			// } @else if $i % 4 == 4 {
+			// 	background: $color4;
+			// } @else {
+			// 	background: $background;
+			// }

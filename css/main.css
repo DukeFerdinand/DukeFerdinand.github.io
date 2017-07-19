@@ -32,11 +32,19 @@
 h1 {
   font-size: 1.5em; }
 
+html {
+  padding: 0; }
+
 body {
   background: #22313F;
   padding: 0;
   margin: 0;
   height: 1500px; }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  user-select: inherit; }
 
 #titlediv {
   text-align: center;
@@ -64,10 +72,10 @@ body {
   width: 100%; }
 
 #wrapper-hidden {
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   display: none;
   z-index: 3; }
 
@@ -108,23 +116,46 @@ body {
   height: 50px;
   margin: 10px auto; }
 
+#section1 {
+  padding: 2%;
+  margin-bottom: 0; }
+
+#section2 {
+  padding: 2%;
+  margin-bottom: 0; }
+
+#section3 {
+  padding: 2%;
+  margin-bottom: 0; }
+
+#section4 {
+  padding: 2%;
+  margin-bottom: 0; }
+
 .backdrop {
   background: #EFEFEF;
-  border-radius: 60px;
+  border-radius: 10px;
   width: 95%;
-  height: 1200px;
+  padding-bottom: 50px;
   margin: 0 auto; }
 
 .info-cont {
   padding-top: 60px; }
 
-.about {
-  display: block; }
-
+.about,
 .work,
 .skills,
 .contact {
-  display: none; }
+  display: block; }
+
+#about,
+#work,
+#skills,
+#contact {
+  width: 1px;
+  height: 1px;
+  position: relative;
+  top: -20em; }
 
 .info-item {
   text-indent: 2em; }
@@ -133,7 +164,8 @@ body {
     text-justify: inter-word; }
 
 .contact-item a {
-  color: black; }
+  color: black;
+  text-decoration: underline; }
 
 img.project {
   width: 100%;
@@ -147,10 +179,23 @@ img.project {
   background: #22313F; }
 
 @media screen and (max-width: 500px) {
+  .mobile-nav {
+    position: fixed;
+    top: left;
+    -10%: 0;
+    display: block;
+    width: 100%;
+    background: #EFEFEF;
+    height: 10%; }
+
+  #titlediv {
+    font-size: 1em; }
+
   .title {
     text-align: center;
     width: 90%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: -1em; }
 
   #navbar {
     display: none; }
@@ -174,8 +219,7 @@ img.project {
     display: none; }
 
   .carat {
-    width: 0px;
-    border-top: 50px solid #A80022; }
+    width: 0px; }
 
   .invert-carat {
     width: 0; }
@@ -194,17 +238,34 @@ img.project {
     border-radius: 5px;
     background: black; }
 
+  #section1 {
+    padding: 0;
+    margin-bottom: 5%; }
+
+  #section2 {
+    padding: 0;
+    margin-bottom: 5%; }
+
+  #section3 {
+    padding: 0;
+    margin-bottom: 5%; }
+
+  #section4 {
+    padding: 0;
+    margin-bottom: 5%; }
+
+  #section1 {
+    padding-top: 30%; }
+
   .info-item {
     width: 80%;
     font-size: 1.25em; }
 
   .info-project {
     display: block;
-    width: 90%; } }
-@media screen and (max-height: 700px) {
-  .positioner {
-    position: absolute;
-    top: 15%;
-    right: 1em; } }
+    width: 90%; }
 
-/*# sourceMappingURL=my-site.css.map */
+  .contact-item {
+    font-size: 1em; } }
+
+/*# sourceMappingURL=main.css.map */

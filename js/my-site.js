@@ -64,27 +64,27 @@ $(window).on('resize', function(){
 // 
 // TODO: try and get the navbar to scroll back up without breaking
 
-$('#about-title, #about-title-hidden').click(function(){
-	$('.work, .skills, .contact').fadeOut(1, function() {
-		// $('#navbar').slideUp(400);
-		$('.about').fadeIn(450);
-	});
-});
-$('#work-title, #work-title-hidden').click(function() {
-	$('.about, .skills, .contact').fadeOut(1, function() {
-		// $('#navbar').slideUp(400);
-		$('.work').fadeIn(450);
-	});
-});
-$('#skills-title, #skills-title-hidden').click(function(){
-	$('.about, .work, .contact').fadeOut(1, function() {
-		// $('#navbar').slideUp(400);
-		$('.skills').fadeIn(450);
-	});
-});
-$('#contact-title, #contact-title-hidden').click(function(){
-	$('.about, .work, .skills').fadeOut(1, function() {
-		// $('#navbar').slideUp(400);
-		$('.contact').fadeIn(450);
-	});
-});
+// $('#about-title, #about-title-hidden').click(function(){
+// 	$('.work, .skills, .contact').fadeOut(1, function() {
+// 		// $('#navbar').slideUp(400);
+// 		$('.about').fadeIn(450);
+// 	});
+// });
+// $('#work-title, #work-title-hidden').click(function() {
+// 	$('.about, .skills, .contact').fadeOut(1, function() {
+// 		// $('#navbar').slideUp(400);
+// 		$('.work').fadeIn(450);
+// 	});
+// });
+// $('#skills-title, #skills-title-hidden').click(function(){
+// 	$('.about, .work, .contact').fadeOut(1, function() {
+// 		// $('#navbar').slideUp(400);
+// 		$('.skills').fadeIn(450);
+// 	});
+// });
+// $('#contact-title, #contact-title-hidden').click(function(){
+// 	$('.about, .work, .skills').fadeOut(1, function() {
+// 		// $('#navbar').slideUp(400);
+// 		$('.contact').fadeIn(450);
+// 	});
+// });
