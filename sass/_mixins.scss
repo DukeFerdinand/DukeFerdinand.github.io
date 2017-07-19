@@ -4,33 +4,13 @@
 	#{$side}: #{$horizontal};
 }
 
-@mixin sections($sections, $padding, $margin, $mobile){
-	@for $i from 1 through $sections{
-		#section#{$i} {
-			@if $mobile == 'no' {
-				//non-mobile positioning
-				float: left;
-				width:  45%;
-				padding:{
-					left:  $padding;
-					right: $padding;
-					top:         5%;
-					bottom:      5%;
-				}
-				margin-bottom: $margin;
+@mixin grid($col-count) {
+	@for $i from 1 through $col-count {
+		$width: 100%;
 
-			} @else {
-					//mobile width
-					width: 100%;
-
-					@if $i % 2 != 0 {
-						background: $background;
-					} @else {
-						background: $carats;
-					}
-				}
+		.column-#{$i}{
+			width: ($width/$i);
+			float: left;
 		}
 	}
 }
-
-// If statement ready for implementation should the need arise

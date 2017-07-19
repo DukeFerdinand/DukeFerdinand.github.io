@@ -13,12 +13,14 @@ body {
 	margin:               0;
 	height:          1500px;
 }
-a {
-	color: inherit;
-	text-decoration: inherit;
-	user-select: inherit;
+//Columns        =======================================================
+@include grid(4);
 
+.row {
+	width: 100%;
+	height: 800px;
 }
+
 //Navbar & Title ===========================================================================
 
 #titlediv {
@@ -108,67 +110,16 @@ a {
 	height: 50px;
 	margin: 10px auto;
 }
-// Main Body ========================================================================
-// Sections=======================
-@include sections(4, 2%, 0, 'no');
+// .backdrop {
+// 	background: $title-background;
+// 	border-radius:           10px;
+// 	width:                    95%;
+// 	padding:{
+// 		bottom: 50px;
+// 	}
+// 	margin:                0 auto;
+// }
 
-.backdrop {
-	background: $title-background;
-	border-radius:           10px;
-	width:                    95%;
-	padding:{
-		bottom: 50px;
-	}
-	margin:                0 auto;
-}
-.info-cont {
-	padding-top: 60px;
-}
-.about,
-.work,
-.skills,
-.contact{
-	display: block;
-}
-
-#about,
-#work,
-#skills,
-#contact {
-	width: 1px;
-	height: 1px;
-	position: relative;
-	top: -20em;
-}
-.info-title{
-	@extend %info-title;
-}
-.info-item {
-	@extend %info-item;
-	text-indent: 2em;
-	p{
-		text-align: justify;
-		text-justify: inter-word;
-	}
-}
-.contact-item{
-	@extend %info-item;
-	a {
-		color: black;
-		text-decoration: underline;
-	}
-}
-img.project{
-	width: 100%;
-	height: 100%;
-}
-.info-project {
-	display: inline-block;
-	margin: 0 auto;
-	width: 45%;
-	height: auto;
-	background: $background;
-}
 //=======================================================================>
 //======================== Media Breakpoint ==============================>
 //=======================================================================>
@@ -227,7 +178,7 @@ img.project{
 	.positioner{
 	width:         30px;
 	height:        30px;
-	@include position(absolute, right, 80%, 1em);
+	@include position(absolute, right, 70%, 1em);
 	
 	}
 	.indicator {
@@ -237,29 +188,4 @@ img.project{
 		border-radius: 5px;
 		background: black;
 	}
-//Main Body ===========================================================
-
-//Sections=======================
-@include sections(8, 0, 5%, 'yes');
-
-
-	#section1 {
-		padding-top: 30%;
-	}
-	.info-item{
-		width: 80%;
-		font-size: 1.25em;
-	}
-	.info-project{
-		display: block;
-		width: 90%;
-	}
-	.contact-item {
-		font-size: 1em
-	}
 }
-// @media screen and (max-height: 700px){
-// 	.positioner{
-// 		@include position(absolute, right, 15%, 1em);
-// 	}
-// }
