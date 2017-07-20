@@ -12,27 +12,28 @@
 
 .carat {
 	@extend      %carat-sides;
-	width:       700px;
+	width:       80%;
 	border: {
 		top:     25px solid $carats;
 		bottom: $transparent-border;
 	}
-
+	margin: 0 auto;
 }
 
 .invert-carat {
 	@extend               %carat-sides;
-	width: 700px;
+	width: 80%;
 	border: {
 		top:    $transparent-border;
 	    bottom:  25px solid #A80022;
 	}
+	margin: 0 auto;
 }
 
-.navigation {
-	display:           flex;
-	justify-content: center;
-}
+// .navigation {
+// 	display:           flex;
+// 	justify-content: center;
+// }
 #wrapper{
 	width: 100%;
 }
@@ -85,28 +86,40 @@
 }
 
 //=======================================================================>
-//======================== Media Breakpoint ==============================>
+//======================== Media Breakpoints ==============================>
 //=======================================================================>
+
+
+
 @media screen and (max-width: $max-width) {
 	.mobile-nav{
 		@include position(fixed, -10%, left, 0);
 		display: block;
-
 		width: 100%;
 		background: $title-background;
 		height: 10%;
+		border-bottom: 5px solid $carats;
 
 	}
 	#titlediv {
-		font-size: 1em;
+		@include position(relative, left, 0, 0);
+		height: 100%;
+		border-bottom: 5px solid $carats;
 	}
 
 	.title{
+		display: inline;
 		text-align: center;
 		width:         90%;	
 		margin:     0 auto;
 		margin-bottom: -1em;
-
+		font-size: .75em;
+		
+		&:after{
+			clear: both;
+			display: table;
+			content: "";
+		}
 	}
 	#navbar {
 		display: none;
@@ -134,10 +147,10 @@
 		display: none;
 	}
 	.carat{
-		width: 0px;
+		display: none;
 	}
 	.invert-carat {
-		width: 0;
+		display: none;
 	}
 	.positioner{
 	width:         30px;

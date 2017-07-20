@@ -1,3 +1,4 @@
+@import '../bower/bower_components/font-awesome/scss/font-awesome.scss';
 @import 'variables'; 
 @import 'extends';
 @import 'mixins';
@@ -17,24 +18,27 @@ body {
 	height:          1500px;
 	
 }
-#outer-container {
-	display:           flex;
-	justify-content: center;
-}
-
 #main-container {
 	width: 95%;
 	background: $title-background;
 	border-radius:           15px;
 	height:                 900px;
 	margin:                0 auto;
+
 }
 .about{
 	background: $carats;
 }
 
+.fa.fa-bars{
+	display: none;
+}
+
 @media screen and (max-width: $max-width){
 	#main-container{
-		margin-top: 25%;
+		padding-top: 23%;
+	}
+	.fa.fa-bars{
+		display: inherit;
 	}
 }
