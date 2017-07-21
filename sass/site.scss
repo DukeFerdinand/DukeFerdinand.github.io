@@ -7,26 +7,35 @@ html, body{
   margin: 0;
   background: $mainBack;
 }
+
+section {
+    clear: both;
+    display: table;
+    content: "";
+}
+
 h1{
   color: $whitish;
 }
-.titlebar{
-  width: 100%;
-  height: 90px;
-  background: $titlebar;
-  position: fixed;
-  z-index: 3;
-  top: 0;
-  right: 0;
-  margin: 0 auto;
-  box-shadow: 0 1px 10px 1px; 
-}
+
 main{
   margin: 0 auto;
   padding: 10%;
   width: 85%;
   background: $whitish;
   box-shadow: 0 0px 15px 5px; 
+
+}
+#navigation{
+  width: 100%;
+  background: #A80022;
+  position: fixed;
+  color: $whitish;
+  z-index: 3;
+  box-shadow: 0 1px 10px 1px black;
+  & *{
+    color: $whitish;
+  }
 
 }
 .bigger-ico{
@@ -44,6 +53,10 @@ main{
     border: 0;
     border-top: solid 5px;
     text-align: center;
+    &::before{
+      content:"";
+      display: table;
+    }
 
     &::after{
       content: "\f121";
@@ -57,28 +70,28 @@ main{
       background: $whitish;
     }
 }
+.section1{
+  width: 100%;
+}
+.intro{
+  margin: 0 auto;
+}
+
+
 .language-img{
 
   margin: 0 auto;
   margin-top: 5%;
   max-height: 250px;
 }
-
-.section2 {
-  margin-top: 10%;
-  height: 500px;
-}
-@media screen and (max-width: 500px){
-  .intro {
-    font-size: 1.5em;
+@media screen and (min-width: 768px){
+  main{
+    padding-top: 10%;
   }
+  
 }
-@media screen and (max-width: 700px){
-  main {
-    padding: 20%;
+@media screen and (max-width: 768px){
+  main{
+    padding-top: 25%;
   }
-  .section2 {
-  margin-top: 20%;
-  height: 500px;
-}
 }
