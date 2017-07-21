@@ -73,6 +73,9 @@ main {
 @media screen and (max-width: 768px) {
   main {
     padding-top: 25%;
-    width: 95%; } }
+    width: 95%; }
+
+  .divider {
+    max-width: 75%; } }
 
 /*# sourceMappingURL=site.css.map */
