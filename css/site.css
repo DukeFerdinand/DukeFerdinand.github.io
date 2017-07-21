@@ -65,6 +65,9 @@ main {
 .intro {
   margin: 0 auto; }
 
+.img-responsive {
+  border-radius: 25px; }
+
 .language-img {
   margin: 0 auto;
   margin-top: 5%;
