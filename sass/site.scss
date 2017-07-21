@@ -9,6 +9,7 @@ html, body{
 }
 
 section {
+    width: 100%;
     clear: both;
     display: table;
     content: "";
@@ -20,7 +21,7 @@ h1{
 
 main{
   margin: 0 auto;
-  padding: 10%;
+  padding-top: 10%;
   width: 85%;
   background: $whitish;
   box-shadow: 0 0px 15px 5px; 
@@ -28,6 +29,7 @@ main{
 }
 #navigation{
   width: 100%;
+  height: 60px;
   background: #A80022;
   position: fixed;
   color: $whitish;
@@ -84,14 +86,20 @@ main{
   margin-top: 5%;
   max-height: 250px;
 }
-@media screen and (min-width: 768px){
-  main{
-    padding-top: 10%;
-  }
+.projects{
   
 }
+
+
+// @media screen and (min-width: 768px){
+//   main{
+//     padding-top: 10%;
+//   }
+  
+// }
 @media screen and (max-width: 768px){
   main{
     padding-top: 25%;
+    width: 95%;
   }
 }
