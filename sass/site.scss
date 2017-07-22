@@ -1,7 +1,12 @@
-$titlebar: #28324e;
-$mainBack: #475577;
-$whitish: #FEFEFE;
-$divider: #75706B;
+@import "..//bower/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../bower/bower_components/font-awesome/scss/font-awesome.scss";
+
+$nav:       #575A5E;
+$div:       #A7A2A9;
+$nav-brand: #A80022;
+$mainBack:  #222823;
+$whitish:   #F4F7F5;
+$divider:   #75706B;
 html, body{
   padding: 0;
   margin: 0;
@@ -22,24 +27,11 @@ h1{
 main{
   margin: 0 auto;
   padding-top: 10%;
-  width: 85%;
-  background: $whitish;
-  box-shadow: 0 0px 15px 5px; 
+  width: 90%;
+  background: $whitish; 
 
 }
-#navigation{
-  width: 100%;
-  height: 60px;
-  background: #A80022;
-  position: fixed;
-  color: $whitish;
-  z-index: 3;
-  box-shadow: 0 1px 10px 1px black;
-  & *{
-    color: $whitish;
-  }
 
-}
 .bigger-ico{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -49,11 +41,11 @@ main{
     height: 0;
     height: 0px;
     display: block;
-    margin: 10% auto 10%;
+    margin: 5% auto 5%;
     padding: 0;
-    max-width: 600px;
+    max-width: 300px;
     border: 0;
-    border-top: solid 5px;
+    border-top: solid 2px $div;
     text-align: center;
     &::before{
       content:"";
@@ -62,21 +54,31 @@ main{
 
     &::after{
       content: "\f121";
+      color: $div;
       font-family: FontAwesome;
       display: inline-block;
       position: relative;
       top: -.8em;
       padding: 0 .25em;
-      font-size: 2em;
+      font-size: 1.5em;
       box-sizing: border-box;
       background: $whitish;
     }
 }
 .section1{
   width: 100%;
+  &:nth-child(n+3){
+    margin-top: 25px;
+  }
+}
+.section2{
+  // .well{
+  //   background: 
+  // }
 }
 .intro{
   margin: 0 auto;
+  
 }
 
 .img-responsive{
@@ -93,7 +95,60 @@ main{
 .projects{
   
 }
+//navbar
+$bgDefault   : $nav-brand;
+$bgHighlight : ($nav-brand - 75);
+$colDefault  : $whitish;
+$colHighlight: ($whitish - 20);
 
+
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus, {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}
 
 // @media screen and (min-width: 768px){
 //   main{
@@ -108,5 +163,12 @@ main{
   }
   .divider{ 
     max-width: 75%;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
   }
 }

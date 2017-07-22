@@ -2,32 +2,52 @@
 <html>
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto:100" rel="stylesheet">
-	<title>Douglass Hooker, Web Developer</title>
+	<title>Douglass Hooker, Web Designer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="/bower/bower_components/jquery/dist/jquery.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
+	<script type="text/javascript" src="/bower/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/site.css">
 </head>
 <body>
-<nav id="navigation" class="nav navbar-default" role="navigation">
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <span class="navbar-brand">DH Web Design</span>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a id="navbar-brand" class="navbar-brand" href="#">Doug H. Web Designer</a>
     </div>
-  </div> <!-- /container-fluid/ -->
+    <div id="#memes" class="navbar-collapse collapse">
+	    <ul class="nav navbar-nav">
+	      <li class="active align-middle"><a href="#">Projects</a></li>
+	      <li><a href="#">Tools</a></li>
+	      <li><a href="#">Contact</a></li>
+	    </ul>
+    </div>
+  </div>
 </nav>
 <main>
   	<section class="section1 text-center">
 	
 			<div class="h1 intro">Hi, I'm Doug.</div>
-	 		<div class="h3 text-danger intro">I'm a web designer.</div>
+	 		<div class="h3 text-danger intro">I'm an actor turned web designer.</div>
+	 		<p class="intro h4">I aim to better myself and those around me, learning as much as I can in everything I do.</p>
+	 		<p class="h4">I never stop learning.</p>
 	 	
 	</section>
 
 	<hr class="divider"></hr>
   	<section class="section2">
-		<div class="h3 text-center">Here are some of my Projects:</div>
+		<div class="h3 text-center text-danger">Here are some of my Projects:</div>
 		<div class="projects language-img row">
 			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-3">
 			<a href="https://codepen.io/Duke_Ferdinand/full/wqwMMj/">
@@ -50,22 +70,22 @@
 	</div>
 
 
-	<section>
+	<section class="">
 	<div class="text-center">
-		<h3 class="text-primary">Here are some things I enjoy:</h3>
+		<h3 class="text-primary">What I use</h3>
 	</div>
 	<div class="row language-img">
 		<div>
-		  	<img class="col-xs-offset-2 col-xs-2 col-sm-2 " src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="">
+		  	<img class="col-xs-3 col-sm-offset-2 col-sm-2 " src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="">
 		</div>
 		<div>
-		  	<img class="col-xs-2 col-sm-2 " src="http://martin-calvert.com/assets/img/jquery.gif" alt="">
+		  	<img class="col-xs-3 col-sm-2 " src="http://martin-calvert.com/assets/img/jquery.gif" alt="">
 		</div>
 		<div>
-			<img class="col-xs-2 col-sm-2 " src="https://bower.io/img/bower-logo.png" alt="">
+			<img class="col-xs-3 col-sm-2 " src="https://bower.io/img/bower-logo.png" alt="">
 		</div>
 	  	<div>
-			<img class="col-xs-2 col-sm-2" src="http://logonoid.com/images/bootstrap-logo.png" alt="">
+			<img class="col-xs-3 col-sm-2" src="http://logonoid.com/images/bootstrap-logo.png" alt="">
 	  	</div>
 		
   	</section>
@@ -78,5 +98,7 @@
 
 	</section>
 </main>
+
+
 </body>
 </html>
