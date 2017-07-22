@@ -78,7 +78,13 @@ main{
 }
 .intro{
   margin: 0 auto;
+  font-size: 2em;
   
+}
+.intro2{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 1.5em;
 }
 
 .img-responsive{
@@ -162,7 +168,18 @@ $colHighlight: ($whitish - 20);
     width: 95%;
   }
   .divider{ 
-    max-width: 75%;
+    max-width: 25%;
+    font-size: .5em;
+    border-top: 1px solid $nav;
+  }
+  .img-responsive{
+    margin-bottom: 5%;
+  }
+  .intro {
+    font-size: 1.5em;
+  }
+  .intro2{
+    font-size: 1em;
   }
   nav {
     position: fixed;

@@ -7519,7 +7519,13 @@ main {
     margin-top: 25px; }
 
 .intro {
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-size: 2em; }
+
+.intro2 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 1.5em; }
 
 .img-responsive {
   border-radius: 25px; }
@@ -7576,7 +7582,18 @@ main {
     width: 95%; }
 
   .divider {
-    max-width: 75%; }
+    max-width: 25%;
+    font-size: .5em;
+    border-top: 1px solid #575A5E; }
+
+  .img-responsive {
+    margin-bottom: 5%; }
+
+  .intro {
+    font-size: 1.5em; }
+
+  .intro2 {
+    font-size: 1em; }
 
   nav {
     position: fixed;
