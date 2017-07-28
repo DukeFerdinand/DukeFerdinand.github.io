@@ -31,7 +31,13 @@ main{
   background: $whitish; 
 
 }
-
+.row {
+  clear: both;
+}
+.inline{
+  display: flex;
+  justify-content: center;
+}
 .bigger-ico{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -76,6 +82,16 @@ main{
   //   background: 
   // }
 }
+.buttons {
+  margin-top: 5%;
+
+}
+.project-buttons{
+  width: 100%;
+  border-radius: 10px;
+  background: $nav-brand;
+  border-color: $nav-brand;
+}
 .intro{
   margin: 0 auto;
   font-size: 2em;
@@ -107,7 +123,8 @@ $bgHighlight : ($nav-brand - 75);
 $colDefault  : $whitish;
 $colHighlight: ($whitish - 20);
 
-
+//Found on the internet,
+//promptly used it to set navbar colors
 .navbar-default {
   background-color: $bgDefault;
   border-color: $bgHighlight;
@@ -162,6 +179,7 @@ $colHighlight: ($whitish - 20);
 //   }
   
 // }
+
 @media screen and (max-width: 768px){
   main{
     padding-top: 25%;
@@ -171,6 +189,10 @@ $colHighlight: ($whitish - 20);
     max-width: 25%;
     font-size: .5em;
     border-top: 1px solid $nav;
+  }
+  #button-cont {
+    width: 95%;
+    margin: 0 auto;
   }
   .img-responsive{
     margin-bottom: 5%;

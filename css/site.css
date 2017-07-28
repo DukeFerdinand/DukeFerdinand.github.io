@@ -7632,6 +7632,13 @@ main {
   width: 90%;
   background: #F4F7F5; }
 
+.row {
+  clear: both; }
+
+.inline {
+  display: flex;
+  justify-content: center; }
+
 .bigger-ico {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -7666,6 +7673,15 @@ main {
   width: 100%; }
   .section1:nth-child(n+3) {
     margin-top: 25px; }
+
+.buttons {
+  margin-top: 5%; }
+
+.project-buttons {
+  width: 100%;
+  border-radius: 10px;
+  background: #A80022;
+  border-color: #A80022; }
 
 .intro {
   margin: 0 auto;
@@ -7734,6 +7750,10 @@ main {
     max-width: 25%;
     font-size: .5em;
     border-top: 1px solid #575A5E; }
+
+  #button-cont {
+    width: 95%;
+    margin: 0 auto; }
 
   .img-responsive {
     margin-bottom: 5%; }
