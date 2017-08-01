@@ -1,10 +1,6 @@
 @import "../bower/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../bower/bower_components/font-awesome/scss/font-awesome.scss";
 
-//Lists
-$inset: 0px 0px 4px 0px inset;
-$outset: 0px 0px 7px 0px rgba(0,0,0,.9);
-
 //Variable Colors
 $nav:               #575A5E;
 $nav-brand:         #A80022;
@@ -14,6 +10,11 @@ $div:               #A7A2A9;
 $divider:           #75706B;
 $transparent: rgba(0,0,0,0);
 $whitish:           #F4F7F5;
+
+//Lists
+$inset:           0px 0px 4px 0px inset;
+$outset: 0px 0px 7px 0px rgba(0,0,0,.9);
+$text:       0 0 7px ($mainBack - 50);
 
 //navbar var colors
 $bgDefault   :        $nav-brand;
@@ -25,7 +26,7 @@ $colHighlight:   ($whitish - 20);
 
 html, body{
   padding:            0;
-  // margin:             0;
+  // margin:          0;
   background: $mainBack;
 }
 .row {
@@ -82,14 +83,14 @@ main{
   font-size:      3em;
 }
 .divider{
-    height:                  0;
-    display:             block;
-    margin:         5% auto 5%;
-    padding:                 0;
-    max-width:           300px;
-    border:                  0;
+    height:                      0;
+    display:                 block;
+    margin:             5% auto 5%;
+    padding:                     0;
+    max-width:               300px;
+    border:                      0;
     border-top: solid 2px $whitish;
-    text-align:         center;
+    text-align:             center;
     &::before{
       content:    "";
       display: table;
@@ -114,8 +115,11 @@ main{
 }
 
 //Header
-.heading{
+.heading {
   color: $whitish;
+  * {
+    text-shadow: $text;
+  }
   // width:        100%;
   padding: {
     top: 5%;
@@ -125,11 +129,15 @@ main{
     margin-top: 25px;
   }
 }
+
+.shadow {
+  // text-shadow: $text;
+}
 #projects {
     margin-bottom: 10%;
 }
 
-//Project
+//Projects
 .project-section{
   background: ($whitish - 10);
   box-shadow:          $inset;
@@ -146,21 +154,25 @@ main{
   background:                     $nav-brand;
   border:                               none;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,.9);
+  color: $whitish;
 
   &:hover {
     background: ($nav-brand - 40);
+    color: $whitish - 40;
   }
-  a{
-    color: $whitish;
+  button {
+    border: inherit;
+    background: inherit;
   }
+  
 }
 
 //Languages
 .languages {
     background: ($whitish - 10);
     box-shadow:          $inset;
-    padding-top:             5%;
-    padding-bottom:          5%;
+    padding-top:             20%;
+    padding-bottom:          20%;
 }
 
 
@@ -207,15 +219,19 @@ main{
     color: $colDefault; }
   .navbar-nav {
     > li {
-      > a {
+      > a, >a:focus {
         color: $colDefault;
-        &:hover,  &:focus {
+        &:hover {
           background: $bgHighlight;
           color: $colHighlight; }}}
     > .active {
-      > a, > a:hover, > a:focus {
+      > a, > a:hover {
         color:           $colHighlight;
-        background-color: $bgHighlight; }}
+        background-color: $bgHighlight; }
+      >a:focus{
+        color:     $colHighlight;
+        background: $bgHighlight;
+        }}
     > .open {
       > a, > a:hover, > a:focus {
         color:           $colHighlight;
