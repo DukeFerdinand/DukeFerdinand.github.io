@@ -7,9 +7,9 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="/css/site.css">
 </head>
-<body class="container-fluid" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body class="container-fluid" data-offset="-15">
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav id="nav" class="active-spy navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
@@ -18,13 +18,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a id="navbar-brand" class="navbar-brand" href="#top">Doug H. Web Designer</a>
+      <a id="navbar-brand" class="navbar-brand" href="#top">Doug H. Web Design</a>
     </div>
     <div id="#memes" class="navbar-collapse collapse">
-	    <ul class="nav navbar-nav">
-	      <li class="align-middle"><a href="#project-section">Projects</a></li>
-	      <li><a href="#languages">What I Use</a></li>
-	      <li><a href="#contact">Contact Me</a></li>
+	    <ul class="nav navbar-nav navbar-right">
+	      	<li><a href="#about">Who I Am</a></li>
+	      	<li class="align-middle"><a href="#project-section">My Projects</a></li>
+	     	<li><a href="#languages">What I Use</a></li>
+	      	<li><a href="#contact">Contact Me</a></li>
 	    </ul>
     </div>
   </div>
@@ -42,7 +43,7 @@
 					<a class="project-buttons" href="https://github.com/DukeFerdinand">
 						<button>
 							<i class="fa fa-github" aria-hidden="true"></i>
-							My Github
+							Github
 						</button>
 					</a>
 			</div>
@@ -51,18 +52,18 @@
 					<a class="project-buttons" href="https://codepen.io/Duke_Ferdinand/">
 						<button>
 							<i class="fa fa-codepen" aria-hidden="true"></i>
-							My Codepen
+							Codepen
 						</button>
 					</a>
 			</div>
 		</div>
 	</section>
 
-	<div class="divider-row">
+	<!-- <div class="divider-row">
   		<hr class="divider"></hr>
-  	</div>
+  	</div> -->
   	<section id="project-section" class="project-section container-fluid">
-		<div class="intro text-center shadow">Here are some of my Projects:</div>
+		<div class="intro text-center section-title shadow">Here are some of my Projects:</div>
 
 		<div id="projects" class=" language-img row">
 			<div class="col-xs-offset-3 col-xs-6 col-sm-offset-2 col-sm-4 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3">
@@ -89,7 +90,7 @@
 
 	<section id="languages" class="languages container-fluid">
 	<div class="text-center">
-		<h3 class="intro text-primary shadow">What I use</h3>
+		<h3 class="intro section-title shadow">What I use</h3>
 	</div>
 	<div class="row language-img">
 		<div>
@@ -109,8 +110,8 @@
 	<div class="divider-row">
   		<hr class="divider"></hr>
   	</div>
-	<section id="contact" class="section4 text-center container-fluid">
-		<h3 class="intro text-center text-confirm">Here's how to reach Me</h3>
+	<section id="contact" class="contacts text-center container-fluid">
+		<h3 class="intro text-center section-title">Here's how to reach Me</h3>
 		<p class="h4">Email:</p>
 		<p>DouglassHooker@gmail.com</p>
 		<p class="h4">Phone:</p>
@@ -121,7 +122,7 @@
 </main>
 
 <script type="text/javascript" src="/bower/bower_components/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="/js/smooth-scroll.js"></script>
 <script type="text/javascript" src="/bower/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+<script type="text/javascript" src="/js/smooth-scroll.js"></script>
 </body>
 </html>

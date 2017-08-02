@@ -1,26 +1,7 @@
 @import "../bower/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../bower/bower_components/font-awesome/scss/font-awesome.scss";
 
-//Variable Colors
-$nav:               #575A5E;
-$nav-brand:         #A80022;
-$mainBack:          #222823;
-$main:            $mainBack;
-$div:               #A7A2A9;
-$divider:           #75706B;
-$transparent: rgba(0,0,0,0);
-$whitish:           #F4F7F5;
-
-//Lists
-$inset:           0px 0px 4px 0px inset;
-$outset: 0px 0px 7px 0px rgba(0,0,0,.9);
-$text:       0 0 7px ($mainBack - 50);
-
-//navbar var colors
-$bgDefault   :        $nav-brand;
-$bgHighlight : ($nav-brand - 75);
-$colDefault  :          $whitish;
-$colHighlight:   ($whitish - 20);
+@import "site-vars";
 
 
 
@@ -60,7 +41,7 @@ main{
     left: 0;
   }
   width:        100%;
-  background:  $main;
+  @include linear-gradient(to bottom right, $mainBack,  #{$mainBack + 50});
 
 }
 .container-fluid{
@@ -71,7 +52,8 @@ main{
 }
 
 .learning {
-  color: $nav-brand;
+  color: $emphasis;
+  text-shadow: 0 0 3px;
 }
 .inline{
   display:           flex;
@@ -98,7 +80,7 @@ main{
 
     &::after{
       content:         "\f121";
-      color:              $whitish;
+      color:          $whitish;
       font-family: FontAwesome;
       display:    inline-block;
       position:       relative;
@@ -106,19 +88,25 @@ main{
       padding:         0 .25em;
       font-size:         1.5em;
       box-sizing:   border-box;
-      background:        $main;
+      background:    $mainBack + 40;
     }
 }
 .divider-row{
   padding-top:    2%;
   padding-bottom: 3%;
+  background: $mainBack + 40;
 }
 
 //Header
 .heading {
+  // @include linear-gradient(to bottom right, $mainBack, #{$mainBack + 20});
+  background: $transparent;
   color: $whitish;
   * {
     text-shadow: $text;
+  }
+  a {
+    background: $buttons;
   }
   // width:        100%;
   padding: {
@@ -150,23 +138,30 @@ main{
 }
 .project-buttons{
   width: 100%;
+
   border-radius:                        10px;
-  background:                     $nav-brand;
+  background:                       $buttons;
   border:                               none;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,.9);
   color: $whitish;
 
   &:hover {
-    background: ($nav-brand - 40);
+    background: ($buttons - 20);
     color: $whitish - 40;
   }
   button {
     border: inherit;
     background: inherit;
+    padding:{
+      top: 2%;
+      bottom: 2%;
+    }
   }
   
 }
-
+.section-title {
+  color: $emphasis;
+}
 //Languages
 .languages {
     background: ($whitish - 10);
@@ -204,14 +199,21 @@ main{
   background: $transparent;
 }
 
-
+.contacts{
+  background: ($whitish - 10);
+  padding:{
+      top: 20%;
+      bottom: 20%;
+  }
+}
 //Found on the internet,
 //promptly used it to set navbar colors
 .navbar-default {
+  padding-left: 12%;
+  padding-right: 5%;
   background-color: $bgDefault;
   border-color:   $bgHighlight;
   .navbar-brand {
-    padding-left: 12%;
     color: $colDefault;
     &:hover, &:focus {
       color: $colHighlight; }}

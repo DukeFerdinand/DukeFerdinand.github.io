@@ -1,0 +1,29 @@
+//Variable Colors
+$nav:               #575A5E;
+$nav-brand:         #18121E;
+// $mainBack:          #222823 + #003034;
+$buttons:			#494949;
+$mainBack:          #0C89B2;
+$main:            $mainBack;
+$div:               #A7A2A9;
+$divider:           #75706B;
+$transparent: rgba(0,0,0,0);
+$whitish:           #F4F7F5;
+$emphasis:             #333;
+
+//Lists
+$inset:           0px 0px 4px 0px inset;
+$outset: 0px 0px 7px 0px rgba(0,0,0,.9);
+$text:       0 0 7px ($mainBack - 50);
+
+//navbar var colors
+$bgDefault   :        $nav-brand;
+$bgHighlight : ($nav-brand + 30);
+$colDefault  :          $whitish;
+$colHighlight:   ($whitish - 20);
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
