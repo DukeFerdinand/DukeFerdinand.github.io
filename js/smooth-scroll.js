@@ -8,20 +8,37 @@
 $("body").scrollspy({
   target: ".active-spy"
 });
-
-$(document).on('click', 'a', function(event) {
-  $('html, body').animate({
-    scrollTop: $($.attr(this, 'href')).offset().top
-  }, {
-    duration: 750,
-    start: function() {
-      $("#nav").removeClass("active-spy");
-    },
-    complete: function() {
-      $("#nav").addClass("active-spy");
-      $(".active").removeClass("active");
-      $(event.target.parentNode).addClass("active");
-    }
+if ($(window).width() > 500){
+  $(document).on('click', 'a', function(event) {
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, {
+      duration: 750,
+      start: function() {
+        $("#nav").removeClass("active-spy");
+      },
+      complete: function() {
+        $("#nav").addClass("active-spy");
+        $(".active").removeClass("active");
+        $(event.target.parentNode).addClass("active");
+      }
+    });
   });
-});
+} else {
+  $(document).on('click', 'a', function(event) {
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, {x
+      duration: 250,
+      start: function() {
+        $("#nav").removeClass("active-spy");
+      },
+      complete: function() {
+        $("#nav").addClass("active-spy");
+        $(".active").removeClass("active");
+        $(event.target.parentNode).addClass("active");
+      }
+    });
+  });
+}
 

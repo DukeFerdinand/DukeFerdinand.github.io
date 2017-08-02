@@ -51,14 +51,13 @@ main{
     }
 }
 
-.learning {
-  color: $emphasis;
-  text-shadow: 0 0 3px;
-}
+
 .inline{
   display:           flex;
   justify-content: center;
 }
+
+//<Dividers>//
 .bigger-ico{
   margin-top:    30px;
   margin-bottom: 30px;
@@ -73,22 +72,23 @@ main{
     border:                      0;
     border-top: solid 2px $whitish;
     text-align:             center;
+
     &::before{
-      content:    "";
-      display: table;
+      content:                  "";
+      display:               table;
     }
 
     &::after{
-      content:         "\f121";
-      color:          $whitish;
-      font-family: FontAwesome;
-      display:    inline-block;
-      position:       relative;
-      top:               -.8em;
-      padding:         0 .25em;
-      font-size:         1.5em;
-      box-sizing:   border-box;
-      background:    $mainBack + 40;
+      content:             "\f121";
+      color:              $whitish;
+      font-family:     FontAwesome;
+      display:        inline-block;
+      position:           relative;
+      top:                   -.8em;
+      padding:             0 .25em;
+      font-size:             1.5em;
+      box-sizing:       border-box;
+      background:   $mainBack + 40;
     }
 }
 .divider-row{
@@ -96,17 +96,19 @@ main{
   padding-bottom: 3%;
   background: $mainBack + 40;
 }
+//</Dividers>//
 
-//Header
+
+//<Header>//
 .heading {
   // @include linear-gradient(to bottom right, $mainBack, #{$mainBack + 20});
   background: $transparent;
-  color: $whitish;
+  color:          $whitish;
   * {
-    text-shadow: $text;
+    text-shadow:     $text;
   }
   a {
-    background: $buttons;
+    background:   $buttons;
   }
   // width:        100%;
   padding: {
@@ -118,12 +120,29 @@ main{
   }
 }
 
+.learning {
+  color: $emphasis;
+  text-shadow: none;
+}
+//</Header>//
+
 .shadow {
   // text-shadow: $text;
 }
 #projects {
     margin-bottom: 10%;
 }
+
+//=====<About>=====//
+.about-section {
+    background: ($whitish - 10);
+    box-shadow: $inset;
+    padding:{
+      top: 20%;
+      bottom: 20%;
+    }
+}
+//====</About>=====//
 
 //Projects
 .project-section{

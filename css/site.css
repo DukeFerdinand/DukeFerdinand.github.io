@@ -7648,10 +7648,6 @@ main {
   padding-right: 0;
   padding-left: 0; }
 
-.learning {
-  color: #333;
-  text-shadow: 0 0 3px; }
-
 .inline {
   display: flex;
   justify-content: center; }
@@ -7702,8 +7698,18 @@ main {
   .heading:nth-child(n+3) {
     margin-top: 25px; }
 
+.learning {
+  color: #333;
+  text-shadow: none; }
+
 #projects {
   margin-bottom: 10%; }
+
+.about-section {
+  background: #eaedeb;
+  box-shadow: 0px 0px 4px 0px inset;
+  padding-top: 20%;
+  padding-bottom: 20%; }
 
 .project-section {
   background: #eaedeb;
