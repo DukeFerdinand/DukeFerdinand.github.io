@@ -7663,7 +7663,6 @@ main {
   margin: 5% auto 5%;
   padding: 0;
   max-width: 300px;
-  border: 0;
   border-top: solid 2px #F4F7F5;
   text-align: center; }
   .divider::before {
@@ -7689,8 +7688,8 @@ main {
 .heading {
   background: transparent;
   color: #F4F7F5;
-  padding-top: 5%;
-  padding-bottom: 25%; }
+  padding-top: 15vh;
+  padding-bottom: 40vh; }
   .heading * {
     text-shadow: 0 0 7px #005780; }
   .heading a {
@@ -7730,6 +7729,9 @@ main {
   .project-buttons:hover {
     background: #353535;
     color: #cccfcd; }
+  .project-buttons:focus {
+    outline: none;
+    color: #F4F7F5; }
   .project-buttons button {
     border: inherit;
     background: inherit;
@@ -7823,9 +7825,13 @@ main {
   .nav-brand {
     padding-left: 4%; }
 
-  main {
-    padding-top: 25%;
-    width: 95%; }
+  .heading {
+    padding-top: 30vh;
+    padding-bottom: 35vh; }
+
+  .about-section {
+    padding-top: 30vh;
+    padding-bottom: 35vh; }
 
   .divider {
     max-width: 25%;

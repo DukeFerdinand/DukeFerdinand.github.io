@@ -69,7 +69,6 @@ main{
     margin:             5% auto 5%;
     padding:                     0;
     max-width:               300px;
-    border:                      0;
     border-top: solid 2px $whitish;
     text-align:             center;
 
@@ -112,8 +111,8 @@ main{
   }
   // width:        100%;
   padding: {
-    top: 5%;
-    bottom: 25%;
+    top:    15vh;
+    bottom: 40vh;
   }
   &:nth-child(n+3){
     margin-top: 25px;
@@ -168,12 +167,16 @@ main{
     background: ($buttons - 20);
     color: $whitish - 40;
   }
+  &:focus{
+      outline: none;
+      color: $whitish;
+    }
   button {
-    border: inherit;
+    border:     inherit;
     background: inherit;
     padding:{
-      top: 2%;
-      bottom: 2%;
+      top:           2%;
+      bottom:        2%;
     }
   }
   
@@ -295,9 +298,17 @@ main{
     padding-left: 4%;
   }
   main{
-    padding-top: 25%;
-    width:       95%;
+    
   }
+  .heading{
+    padding-top:    30vh;
+    padding-bottom: 35vh;
+  }
+  .about-section{
+    padding-top:    30vh;
+    padding-bottom: 35vh;
+  }
+
   .divider{ 
     max-width:             25%;
     font-size:            .5em;
