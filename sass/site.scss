@@ -1,8 +1,37 @@
 @import "../bower/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../bower/bower_components/font-awesome/scss/font-awesome.scss";
 
-@import "site-vars";
+// @import "site-vars";
 
+//Variable Colors
+// $nav:               #575A5E;
+$navbar:            #18121E;
+
+// $mainBack:          #222823 + #003034;
+$buttons:           #494949;
+$mainBack:          #0C89B2;
+$main:            $mainBack;
+$div:               #A7A2A9;
+$divider:           #75706B;
+$transparent: rgba(0,0,0,0);
+$whitish:           #F4F7F5;
+$emphasis:             #333;
+
+//Lists
+$inset:           0px 0px 4px 0px inset;
+$outset: 0px 0px 7px 0px rgba(0,0,0,.9);
+$text:                  0 0 7px $navbar;
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+
+//===========================================================================
+//                              Desktop
+//===========================================================================
 
 
 html, body{
@@ -56,7 +85,9 @@ main{
   display:           flex;
   justify-content: center;
 }
-
+//===========================================================================
+//                              Dividers
+//===========================================================================
 //<Dividers>//
 .bigger-ico{
   margin-top:    30px;
@@ -97,6 +128,9 @@ main{
 }
 //</Dividers>//
 
+//===========================================================================
+//                              Header
+//===========================================================================
 
 //<Header>//
 .heading {
@@ -132,6 +166,10 @@ main{
     margin-bottom: 10%;
 }
 
+//===========================================================================
+//                              About
+//===========================================================================
+
 //=====<About>=====//
 .about-section {
     background: ($whitish - 10);
@@ -142,6 +180,11 @@ main{
     }
 }
 //====</About>=====//
+
+
+//===========================================================================
+//                              Projects
+//===========================================================================
 
 //Projects
 .project-section{
@@ -184,6 +227,11 @@ main{
 .section-title {
   color: $emphasis;
 }
+
+//===========================================================================
+//                           Languages/Tools
+//===========================================================================
+
 //Languages
 .languages {
     background: ($whitish - 10);
@@ -228,27 +276,65 @@ main{
       bottom: 20%;
   }
 }
-//Found on the internet,
-//promptly used it to set navbar colors
+//===========================================================================
+//                              Navbar
+//===========================================================================
+
+//navbar var colors
+$bgTransparent:       rgba(0,0,0,0);
+$bgDefault    :             $navbar;
+$bgHighlight  :             #34b1da;
+$colDefault   :               white;
+$colHighlight :               white;
+
+
+//Bootstrap Sass Navbar variables
+
 .navbar-default {
-  padding-left: 12%;
-  padding-right: 5%;
+  padding-left: 5%;
+  padding-right: 2%;
   background-color: $bgDefault;
-  border-color:   $bgHighlight;
+  border-color:   $bgDefault;
+  // .navbar-header{
+  //   margin:{
+  //         top: 1%;
+  //         bottom: 1%;
+  //       }
+  // }
+
   .navbar-brand {
+    margin-top: 3%;
     color: $colDefault;
     &:hover, &:focus {
       color: $colHighlight; }}
   .navbar-text {
     color: $colDefault; }
   .navbar-nav {
+    >ul * {
+      margin:{
+          right: 20%;
+          top: 5%;
+          bottom: 5%;
+        }
+    }
     > li {
+      margin-left: 10px;
       > a, >a:focus {
+        border-radius: 10px;
+        margin:{
+          top: 5%;
+          // right: 5%;
+          bottom: 5%;
+        }
         color: $colDefault;
         &:hover {
-          background: $bgHighlight;
-          color: $colHighlight; }}}
+          // background: $bgHighlight;
+          color: $bgHighlight; }}}
+
     > .active {
+
+        text-shadow:             $text;
+
       > a, > a:hover {
         color:           $colHighlight;
         background-color: $bgHighlight; }
@@ -261,7 +347,7 @@ main{
         color:           $colHighlight;
         background-color: $bgHighlight; }}}
   .navbar-toggle {
-    border-color: $bgHighlight;
+    border-color: $colDefault;
     &:hover, &:focus {
       background-color: $bgHighlight; }
     .icon-bar {
@@ -273,7 +359,16 @@ main{
     color: $colDefault;
     &:hover {
       color: $colHighlight; }}}
+
+
+//===========================================================================
+//                              Navbar-Phone
+//===========================================================================
+
 @media (max-width: 767px) {
+  .navbar-brand{
+    margin-top: 0;
+  }
   .navbar-default .navbar-nav .open .dropdown-menu {
     > li > a {
       color: $colDefault;
@@ -281,6 +376,10 @@ main{
         color: $colHighlight; }}
     > .active {
       > a, > a:hover, > a:focus, {
+        margin:{
+          top: 0;
+          bottom: 0;
+        }
         color: $colHighlight;
         background-color: $bgHighlight; }}}
 }
@@ -291,6 +390,11 @@ main{
 //   }
   
 // }
+
+
+//===========================================================================
+//                              Phone
+//===========================================================================
 
 @media screen and (max-width: 768px){
 
@@ -312,7 +416,7 @@ main{
   .divider{ 
     max-width:             25%;
     font-size:            .5em;
-    border-top: 1px solid $nav;
+    border-top: 1px solid $div;
   }
   #button-cont {
     width:     95%;
